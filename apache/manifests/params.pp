@@ -11,14 +11,14 @@ if($::fqdn){
 	$log_root      = "/var/log/apache"
 
 case $::osfamily {
-	'redhat'{
+	'redhat':{
 	$package_name = "httpd"
 	$service_name = "httpd"
 	$conf_dir     = "/etc/httpd/conf"
-	$vhost_dir    = /etc/httpd/conf.d"	
+	$vhost_dir    = "/etc/httpd/conf.d"	
 	
 	}
-	'debain'{
+	'debain':{
 	 $package_name = "apache2"
         $service_name  = "apache2"
         $conf_dir      = "/etc/apache2"
